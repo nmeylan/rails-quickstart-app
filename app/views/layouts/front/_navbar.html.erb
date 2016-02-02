@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default" role="navigation" data-role="navbar">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <%= fa_icon("chevron-down") %>
+      </button>
+      <ul class="navbar-brand">
+        <%= t("shared.btn.dashboard") %>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="navbar-right nav navbar-nav">
+        <li>
+          <%= link_to fa_icon("home", text: t("shared.actions.home")), root_path, class: "btn btn-link"  %>
+        </li>
+        <li>
+          <%= link_to fa_icon("sign-out", text: t("shared.actions.sign_out")), destroy_user_session_path, class: "btn btn-link", method: :delete %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

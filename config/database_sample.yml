@@ -1,0 +1,20 @@
+# This is a sample of database.yml sample
+# To copy in database.yml
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: sample
+  user: root
+  password:
+
+test:
+  <<: *default
+  database: sample
+
+production:
+  <<: *default
+  database: sample

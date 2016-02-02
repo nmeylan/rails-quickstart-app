@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
+
+  <%= stylesheet_link_tag 'front', media: 'all' %>
+  <%= javascript_include_tag 'front' %>
+</head>
+
+<body id="front" class="<%= controller_name %> <%= action_name %>">
+
+<div id="content-wrapper">
+  <%= render partial: "layouts/front/navbar" %>
+  <div class="container">
+    <%= render "layouts/flash"%>
+    <%= yield %>
+  </div>
+
+  <%= render partial: "layouts/footer" %>
+</div>
+</body>
+</html>

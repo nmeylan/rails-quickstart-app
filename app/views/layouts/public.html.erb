@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sample</title>
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
+
+  <%= stylesheet_link_tag 'public', media: 'all' %>
+  <%= javascript_include_tag 'public' %>
+</head>
+
+<body id="public" class="<%= controller_name %> <%= action_name %>">
+<header>
+  <div class="container text-center">
+    <%= link_to t("shared.actions.sign_in"), new_user_session_path, class: "btn btn-default", id: "btn-sign-in" %>
+
+    <h1>sample</h1>
+
+    <h2><%= t("public.layout.headline") %></h2>
+  </div>
+</header>
+<div class="container">
+  <%= render "layouts/flash"%>
+  <%= yield %>
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>
